@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="asset/image/favicon.ico">
+
+    <title>DeliCar</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="asset/css/custom.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">DeliCar</a>
+        </div>
+        <!-- <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div> -->
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Delivery Submit Form -->
+        <div class="col-sm-4 col-md-3 sidebar">
+          <form class="form-signin">
+            <h2 class="form-signin-heading">Set your delivery</h2>
+            <br/>
+            <label for="pickupPoint" class="sr-only">PICKUP POINT</label>
+            <input type="text" id="pickupPoint" class="form-control" placeholder="PICKUP POINT" required="">
+            <br/>
+            <div class="input-group">
+              <input class="form-control" placeholder="DROPOFF POINT">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+            </div>
+          </form>
+        </div>
+        <!-- End of Form -->
+
+        <!-- Map -->
+        <div class="col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3 main">
+          <!-- Init Map here -->
+          <h1>Map</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  </body>
+</html>
