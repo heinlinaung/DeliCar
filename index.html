@@ -37,19 +37,20 @@
     </nav>
 
     <div class="container-fluid">
-      <div class="row">
+      <div class="row main-app">
         <!-- Delivery Submit Form -->
         <div class="col-sm-4 col-md-3 sidebar">
           <form class="form-signin">
-            <h2 class="form-signin-heading">Set your delivery</h2>
-            <br/>
+            <h3 class="form-signin-heading">
+              Set your delivery route
+            </h3>
+            <hr>
             <label for="pickupPoint" class="sr-only">PICKUP POINT</label>
-            <input type="text" id="pickupPoint" class="form-control" placeholder="PICKUP POINT" required="">
-            <br/>
+            <input type="text" id="pickupPoint" class="form-control push-10px-bottom" placeholder="PICKUP POINT" required="">
             <div class="input-group">
               <input class="form-control" placeholder="DROPOFF POINT">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
+                <button class="btn btn-default go-btn" type="button">Go!</button>
               </span>
             </div>
           </form>
@@ -59,7 +60,7 @@
         <!-- Map -->
         <div class="col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3 main">
           <!-- Init Map here -->
-          <h1>Map</h1>
+          <h3>Map</h3>
         </div>
       </div>
     </div>

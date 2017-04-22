@@ -2,9 +2,9 @@
  * Base structure
  */
 
-/* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif !important;
 }
 
 
@@ -21,6 +21,12 @@ body {
  * Top navigation
  * Hide default border to remove 1px line.
  */
+ .navbar-brand{
+  color : #4f4f4f !important;
+  font-weight: 700;
+  font-size: 33px;
+  letter-spacing: 0.07em;
+ }
 .navbar-fixed-top {
   border: 0;
 }
@@ -29,10 +35,12 @@ body {
  * Sidebar
  */
 
-/* Hide for mobile, show later */
-/*.sidebar {
-  display: none;
-}*/
+.main-app{
+  color : #444;
+}
+.sidebar h3{
+  letter-spacing: -.02em !important;
+}
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
@@ -73,6 +81,11 @@ body {
 .main {
   padding: 15px;
 }
+.go-btn{
+  background-color: #f39323;
+  color : #fff ;
+  font-weight: 500;
+}
 @media (min-width: 768px) {
   .main {
     padding-right: 40px;
@@ -101,4 +114,9 @@ body {
 .placeholder img {
   display: inline-block;
   border-radius: 50%;
+}
+
+/* push css */
+.push-10px-bottom{
+  margin-bottom: 10px;
 }
