@@ -1,0 +1,24 @@
+{
+  "name": "deli-car",
+  "version": "1.0.0",
+  "description": "Map based delivery service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heinlinaung/DeliCar.git"
+  },
+  "keywords": [
+    "DeliCar",
+    "Delivery",
+    "Map"
+  ],
+  "author": "Hein Lin Aung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heinlinaung/DeliCar/issues"
+  },
+  "homepage": "https://github.com/heinlinaung/DeliCar#readme"
+}
