@@ -1,12 +1,12 @@
 "use strict";
 
-function AutoComplete( map ) {
+let AutoComplete = function ( map ) {
     let _this = this;
     _this.map = map;
     _this.orgPlaceId = null;
     _this.destPlaceId = null;
-    _this.directionsService = new google.maps.DirectionsService;
     _this.directionsDisplay = new google.maps.DirectionsRenderer;
+    _this.directionsService = new google.maps.DirectionsService;
     _this.directionsDisplay.setMap( map );
     _this.defaultTravelMode = 'DRIVING'
 
@@ -31,6 +31,21 @@ function AutoComplete( map ) {
     _this.bindAutoComplete(dropOffPointAutoComplete, 'dropoff');
 }
 
+AutoComplete.prototype.bindAutoComplete = function( autocomplete, point ) {
+    let _this = this;
+    autocomplete.bindTo('bounds', _this.map);
+    autocomplete.addListener('place_changed', function() {
+        let place = autocomplete.getPlace();
+        if ( point === 'pickup') {
+            _this.orgPlaceId = place.place_id;
+        } else if ( point === 'dropoff' ) {
+            _this.destPlaceId = place.place_id;
+        }
+        _this.checkLocationInputAndProceed();
+    });
+
+};
+
 AutoComplete.prototype.bindClickEvent = function( eleId ) {
     let _this = this;
     let goBtn = document.getElementById( eleId );
@@ -41,24 +56,6 @@ AutoComplete.prototype.bindClickEvent = function( eleId ) {
     });
 };
 
-AutoComplete.prototype.bindAutoComplete = function( autocomplete, point ) {
-    let _this = this;
-    autocomplete.bindTo('bounds', _this.map);
-    autocomplete.addListener('place_changed', function() {
-        let place = autocomplete.getPlace();
-        // if (!place.place_id) {
-        //     window.alert("Please, select a location to proceed.");
-        //     return;
-        // }
-        if ( point === 'pickup') {
-            _this.orgPlaceId = place.place_id;
-        } else if ( point === 'dropoff' ) {
-            _this.destPlaceId = place.place_id;
-        }
-        _this.checkLocationInputAndProceed();
-    });
-
-};
 AutoComplete.prototype.checkLocationInputAndProceed = function() {
     let _this = this;
     let pickUpPoint = document.getElementById('pickup-point').value.trim();
@@ -70,7 +67,7 @@ AutoComplete.prototype.checkLocationInputAndProceed = function() {
 AutoComplete.prototype.findRoute = function() {
     let _this = this;
     console.log('_this.orgPlaceId: ',_this.orgPlaceId)
-    if (!_this.orgPlaceId || !_this.destPlaceId) { window.alert("GeGEe."); return }
+    if (!_this.orgPlaceId || !_this.destPlaceId) { window.alert("Please, check and set your route correctly."); return }
 
     _this.directionsService.route({
         origin: {
