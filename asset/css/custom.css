@@ -36,7 +36,7 @@ body {
  */
 
 .main-app{
-  color : #444;
+  color : #666;
 }
 .sidebar h3{
   letter-spacing: -.02em !important;
@@ -79,13 +79,19 @@ body {
  */
 
 .main {
-  padding: 15px;
+  padding: 15px !important;
 }
 .go-btn{
   background-color: #f39323;
   color : #fff ;
   font-weight: 500;
 }
+.go-btn:hover , .go-btn:focus, .go-btn:active{
+  /*background-color:#ed7e00;*/
+  color : #fff ;
+  outline: none !important;
+}
+
 @media (min-width: 768px) {
   .main {
     padding-right: 40px;
@@ -96,24 +102,14 @@ body {
   margin-top: 0;
 }
 
-
-/*
- * Placeholder dashboard ideas
- */
-
-.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
-}
-.placeholders h4 {
-  margin-bottom: 0;
-}
-.placeholder {
-  margin-bottom: 20px;
-}
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
+#map {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(229, 227, 223);
 }
 
 /* push css */
