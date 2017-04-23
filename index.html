@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="Map based delivery service" content="">
+    <meta name="Hein Lin Aung" content="">
     <link rel="icon" href="asset/image/favicon.ico">
 
     <title>DeliCar</title>
@@ -20,54 +20,49 @@
 
   <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav id="site-header" class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">DeliCar</a>
         </div>
-        <!-- <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-        </div> -->
       </div>
     </nav>
 
     <div class="container-fluid">
       <div class="row main-app">
-        <!-- Delivery Submit Form -->
+        <!-- Form - Find Route -->
         <div class="col-sm-4 col-md-3 sidebar">
           <form class="form-signin">
             <h3 class="form-signin-heading">
-              Set your delivery route
+              Find your delivery route
             </h3>
             <hr>
             <label for="pickupPoint" class="sr-only">PICKUP POINT</label>
-            <input type="text" id="pickupPoint" class="form-control push-10px-bottom" placeholder="PICKUP POINT" required="">
+            <input type="text" id="pickup-point" class="form-control push-10px-bottom" placeholder="PICKUP POINT">
             <div class="input-group">
-              <input class="form-control" placeholder="DROPOFF POINT">
+              <input class="form-control" id="dropoff-point" placeholder="DROPOFF POINT">
               <span class="input-group-btn">
-                <button class="btn btn-default go-btn" type="button">Go!</button>
+                <button class="btn go-btn" id="search" type="button">Go!</button>
               </span>
             </div>
           </form>
         </div>
-        <!-- End of Form -->
+        <!-- End of Form - Find Route -->
 
         <!-- Map -->
         <div class="col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3 main">
-          <!-- Init Map here -->
-          <h3>Map</h3>
+          <div id="map-container">
+              <div id="map"></div>
+          </div>
         </div>
+        <!-- End of Map -->
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="asset/js/mapController.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTuJrUXmrjChHtzRI6NLVi-X39r4gE8go&libraries=places&callback=initializeMap"
+        async defer></script>
   </body>
 </html>
