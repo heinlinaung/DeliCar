@@ -8,6 +8,7 @@ let AutoComplete = function ( map ) {
     _this.directionsDisplay = new google.maps.DirectionsRenderer;
     _this.directionsService = new google.maps.DirectionsService;
     _this.directionsDisplay.setMap( map );
+    _this.directionsDisplay.setPanel(document.getElementById('right-panel'));
     _this.defaultTravelMode = 'DRIVING'
 
     let pickUpPointAutoComplete = new google.maps.places.Autocomplete(
@@ -79,6 +80,7 @@ AutoComplete.prototype.findRoute = function() {
         travelMode: _this.defaultTravelMode
     }, function(res, status) {
         if (status === 'OK') {
+            console.log('res: ',res)
             _this.directionsDisplay.setDirections( res );
         } else {
             window.alert('Directions request failed due to ' + status);
