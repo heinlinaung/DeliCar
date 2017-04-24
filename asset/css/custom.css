@@ -40,6 +40,8 @@ body {
 }
 
 .sidebar{
+  margin-top:15px;
+  padding:0px;
   background-color: #E3EDF7;
 }
 
@@ -53,6 +55,18 @@ body {
   color:#fff;
 }
 
+#direction-mode{
+  background-color: #6997F4;
+}
+#direction-mode a{
+  color:#fff !important;
+}
+#direction-mode a:hover{
+  color:#6997F4 !important;
+}
+#direction-mode li.active a{
+  color:#6997F4 !important;
+}
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
@@ -61,7 +75,7 @@ body {
     left: 0;
     z-index: 1000;
     display: block;
-    padding: 15px;
+    /*padding: 15px;*/
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     border-right: 1px solid #eee;
@@ -131,18 +145,40 @@ body {
 
 /* Map Directions*/
 .adp-placemark{
-
+  margin-top : 0px !important;
+  margin-bottom : 0px !important;
+  height: 50px;
+  border: none !important;
+  color: #fff !important;
+  font-weight: 400 !important;
+  background-color: #6997F4 !important;
 }
-
+.adp-placemark tr>td{
+  padding: 0px 5px !important;
+}
 .adp-summary{
-
+  padding-top: 2px !important;
+  color: #fff;
+  font-weight: 500;
+  padding-left: 10px !important;
+  background-color :#2a6bed;
+}
+.adp-legal{
+  background-color: #E3EDF7;
 }
 
 table.adp-directions{
   background-color:#F2F5FA;
   width: 100%;
 }
-
 table.adp-directions tr{
-  height: 50px;
+  height: 43px;
+  padding-left: 10px !important;
+  border:none !important;
+}
+
+td.adp-substep {
+  vertical-align : middle;
+  font-weight: 400;
+  border:none !important;
 }
