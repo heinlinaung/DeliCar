@@ -38,9 +38,21 @@ body {
 .main-app{
   color : #666;
 }
+
+.sidebar{
+  background-color: #E3EDF7;
+}
+
+.sidebar form{
+  background-color: #88AEF6;
+  padding:15px;
+}
+
 .sidebar h3{
   letter-spacing: -.02em !important;
+  color:#fff;
 }
+
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
@@ -115,4 +127,22 @@ body {
 /* push css */
 .push-10px-bottom{
   margin-bottom: 10px;
+}
+
+/* Map Directions*/
+.adp-placemark{
+
+}
+
+.adp-summary{
+
+}
+
+table.adp-directions{
+  background-color:#F2F5FA;
+  width: 100%;
+}
+
+table.adp-directions tr{
+  height: 50px;
 }
